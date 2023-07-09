@@ -1,0 +1,224 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Genisup</title>
+    <link rel="stylesheet" href="{% static 'css/design.css' %}" type="text/css">
+
+    <!-- Custom Styles -->
+    <style>
+        .global{
+            padding: 50px;
+            color: #f0f9ff;
+            margin-top: 80px;
+            background-image: url(https://images.unsplash.com/photo-1638376776402-9a4b75fe21bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YmxhY2slMjB1aXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60);
+              }
+        /* Add custom styles here */
+
+        /* Section styles */
+        .section {
+            padding: 80px 0;
+        }
+
+        /* Main title styles */
+        .main-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        /* Subtitle styles */
+        .subtitle {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* Content styles */
+        .content {
+            font-size: 16px;
+            color: #777;
+        }
+
+        /* Team member styles */
+        .team-member {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .team-member .name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .team-member .position {
+            font-size: 16px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'home'%}">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'about'%}">About Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="{% url 'services'%}" id="navbarDropdown" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Services
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="/services">Semiconductor</a>
+                      <a class="dropdown-item" href="/services">Automobile</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="/services">Manufacturing</a>
+                  </div>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{%url 'contact' %}">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{%url 'blog'%}">Blog</a>
+              </li>
+          </ul>
+
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <form class="form-inline my-2 my-lg-0">
+                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'dologout' %}">
+                      <i class="fas fa-sign-out-alt"></i>
+                  </a>
+              </li>
+          </ul>
+      </div>
+     </nav>
+
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="main-title">About Genisup</h2>
+                    <p class="subtitle">Our Story</p>
+                    <p class="content">Genisup is a semiconductor and system design company with a focus on Turnkey ASICs, Mixed Signal IP, Semiconductor & Product Engineering, and IoT solutions catering to Networking & Telecommunications, Security, Automotive, Aerospace & Defense, Consumer Electronics, and Medical.
+
+                        We've established ourselves as a trusted technology and excellence partner. Our teams are multi-disciplinary, uniting scientific rigor, design ingenuity, and engineering excellence for consumer, healthcare, and industrial clients.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 team-member">
+                    <img src="data:image/jpeg;base64,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" alt="Team Member 1">
+                    <div class="name">Vinay Seth</div>
+                    <div class="position">CEO</div>
+                </div>
+                <div class="col-lg-4 team-member">
+                    <img src="{% static 'images/team-member2.jpg' %}" alt="Team Member 2">
+                    <div class="name">Jane Smith</div>
+                    <div class="position">CTO</div>
+                </div>
+                <div class="col-lg-4 team-member">
+                    <img src="{% static 'images/team-member3.jpg' %}" alt="Team Member 3">
+                    <div class="name">Mark Johnson</div>
+                    <div class="position">COO</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional sections or content can be added here -->
+
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+    <!-- Add any required JavaScript files here -->
+   <!-- footer -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css'>
+
+<div class="global">
+    <div class="curve"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-3">
+                <h6>Genisup</h6>
+                <p>Bringing your ideas to life with our designs. Providing world-class services and customer support.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-2">
+                <h6>Services</h6>
+                <ul>
+                    <li><a href="#">Email Marketing</a></li>
+                    <li><a href="#">Campaigns</a></li>
+                    <li><a href="#">Branding</a></li>
+                    <li><a href="#">Offline</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-6 col-md-2">
+                <h6>About</h6>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Benefits</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-6 col-md-2">
+                <h6>Legal</h6>
+                <ul>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of use</a></li>
+                </ul>
+            </div>
+
+            <div class="social">
+                <h6>Follow us</h6>
+                <a href="https://www.facebook.com/GenisupIndia/" target="_blank"><i class="fa fa-facebook"></i> </a>
+                <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fgenisup" target="_blank"><i class="fa fa-twitter"></i> </a>
+                <a href="https://www.linkedin.com/company/genisup-india-private/?originalSubdomain=in" target="_blank"><i class="fa fa-linkedin"></i> </a>
+
+                <a href="https://genisup.com/#" target="_blank"><i class="fa fa-google-plus"></i> </a>
+            </div>
+
+        </div>
+        <p class="copyright">
+            &copy; Copyright All rights reserved.
+        </p>
+    </div>
+</div>
+
+<!-- footer -->
+</body>
+</html>
